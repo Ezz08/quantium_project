@@ -1,58 +1,107 @@
-echo "# 📊 Soul Foods Sales Data Project"
+# 📊 Soul Foods Sales Data Project
 
-echo ""
-echo "## 🧠 Overview"
-echo "This project processes raw transaction data from Soul Foods and transforms it into a clean and structured dataset for analysis."
+## 🧠 Overview
+This project processes raw transaction data from Soul Foods and converts it into a clean dataset for analysis.
 
-echo ""
-echo "## 📁 Dataset"
-echo "Files used:"
-echo "- daily_sales_data_0.csv"
-echo "- daily_sales_data_1.csv"
-echo "- daily_sales_data_2.csv"
+It focuses on cleaning, filtering, and transforming multiple CSV files into a single structured output.
 
-echo ""
-echo "Columns:"
-echo "- product"
-echo "- quantity"
-echo "- price"
-echo "- date"
-echo "- region"
+---
 
-echo ""
-echo "## 🎯 Objective"
-echo "- Merge multiple CSV files"
-echo "- Filter only Pink Morsels"
-echo "- Clean data types"
-echo "- Create sales column (quantity × price)"
-echo "- Export final dataset"
+## 📁 Dataset
+The project uses three CSV files located in the `data/` folder:
 
-echo ""
-echo "## ⚙️ Steps"
-echo "1. Load CSV files using pandas"
-echo "2. Merge datasets"
-echo "3. Filter product = pink morsel"
-echo "4. Remove $ from price and convert to float"
-echo "5. Convert quantity to integer"
-echo "6. Create sales = quantity * price"
-echo "7. Keep only sales, date, region"
-echo "8. Export formatted_sales_data.csv"
+- daily_sales_data_0.csv  
+- daily_sales_data_1.csv  
+- daily_sales_data_2.csv  
 
-echo ""
-echo "## 📊 Output Example"
-echo "sales | date | region"
-echo "300 | 2024-01-01 | north"
-echo "150 | 2024-01-02 | south"
+Each file contains:
 
-echo ""
-echo "## 🛠️ Tech Stack"
-echo "- Python"
-echo "- Pandas"
+- product  
+- quantity  
+- price  
+- date  
+- region  
 
-echo ""
-echo "## 🚀 Run Project"
-echo "pip install pandas"
-echo "python main.py"
+---
 
-echo ""
-echo "Done ✔"
+## 🎯 Objective
+The goal of this project is to:
+
+- Merge multiple CSV files into one dataset  
+- Filter only **Pink Morsels**  
+- Clean and convert data types  
+- Create a new calculated column: **sales**  
+- Export a final clean dataset  
+
+---
+
+## ⚙️ Data Processing Steps
+
+### 1. Load Data
+Read all CSV files using pandas.
+
+### 2. Merge Data
+Combine all datasets into one DataFrame.
+
+### 3. Filter Product
+Keep only rows where product is:
+
+- pink morsel  
+
+---
+
+### 4. Clean Price Column
+Remove `$` and convert values to float.
+
+---
+
+### 5. Convert Quantity
+Ensure quantity is numeric (int).
+
+---
+
+### 6. Create Sales Column
+Calculate sales using:
+
+- sales = quantity × price  
+
+---
+
+### 7. Select Final Columns
+Keep only:
+
+- sales  
+- date  
+- region  
+
+---
+
+### 8. Export File
+Save final dataset as:
+
+- formatted_sales_data.csv  
+
+---
+
+## 📊 Output Example
+
+| sales | date       | region |
+|------|------------|--------|
+| 300  | 2024-01-01 | north  |
+| 150  | 2024-01-02 | south  |
+
+---
+
+## 🛠️ Tech Stack
+
+- Python 🐍  
+- Pandas 📊  
+- CSV Processing  
+
+---
+
+## 🚀 How to Run
+
+```bash id="run1"
+pip install pandas
+python main.py
