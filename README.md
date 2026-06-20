@@ -1,46 +1,58 @@
-# 📦 Python Project Setup (Git + Virtual Environment + Dash)
+echo "# 📊 Soul Foods Sales Data Project"
 
-# 1️⃣ Clone the repository
-git clone <repo-url>
-cd <repo-name>
+echo ""
+echo "## 🧠 Overview"
+echo "This project processes raw transaction data from Soul Foods and transforms it into a clean and structured dataset for analysis."
 
-# 2️⃣ Create virtual environment
-python -m venv venv
+echo ""
+echo "## 📁 Dataset"
+echo "Files used:"
+echo "- daily_sales_data_0.csv"
+echo "- daily_sales_data_1.csv"
+echo "- daily_sales_data_2.csv"
 
-# 3️⃣ Activate virtual environment (Windows PowerShell)
-.\venv\Scripts\Activate.ps1
+echo ""
+echo "Columns:"
+echo "- product"
+echo "- quantity"
+echo "- price"
+echo "- date"
+echo "- region"
 
-# OR (Windows CMD)
-# venv\Scripts\activate
+echo ""
+echo "## 🎯 Objective"
+echo "- Merge multiple CSV files"
+echo "- Filter only Pink Morsels"
+echo "- Clean data types"
+echo "- Create sales column (quantity × price)"
+echo "- Export final dataset"
 
-# OR (Mac/Linux)
-# source venv/bin/activate
+echo ""
+echo "## ⚙️ Steps"
+echo "1. Load CSV files using pandas"
+echo "2. Merge datasets"
+echo "3. Filter product = pink morsel"
+echo "4. Remove $ from price and convert to float"
+echo "5. Convert quantity to integer"
+echo "6. Create sales = quantity * price"
+echo "7. Keep only sales, date, region"
+echo "8. Export formatted_sales_data.csv"
 
-# 4️⃣ Install dependencies
-pip install dash pandas
+echo ""
+echo "## 📊 Output Example"
+echo "sales | date | region"
+echo "300 | 2024-01-01 | north"
+echo "150 | 2024-01-02 | south"
 
-# Install Dash testing dependencies
-pip install "dash[testing]"
+echo ""
+echo "## 🛠️ Tech Stack"
+echo "- Python"
+echo "- Pandas"
 
-# 5️⃣ Save dependencies (optional but recommended)
-pip freeze > requirements.txt
+echo ""
+echo "## 🚀 Run Project"
+echo "pip install pandas"
+echo "python main.py"
 
-# 🧩 Why Virtual Environment?
-# - Isolates project dependencies
-# - Prevents version conflicts between projects
-# - Keeps system Python clean
-# - Makes projects reproducible on other machines
-
-# 📁 Git Best Practice
-# ❌ Do NOT upload venv/ to GitHub
-# ✔ Upload only:
-# - source code
-# - requirements.txt
-# - project files
-
-# 🎯 Final Workflow
-# git clone <repo>
-# cd <repo>
-# python -m venv venv
-# activate venv
-# pip install -r requirements.txt
+echo ""
+echo "Done ✔"
